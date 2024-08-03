@@ -1,38 +1,78 @@
-.App {
+/* Global body styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e9ecef; /* Light background for contrast */
+}
+
+/* Container for centering and styling */
+.weather-container {
+  max-width: 800px;
+  margin: 40px auto 0 auto; /* Add space at the top and center the container horizontally */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  text-align: center; /* Center content inside the container */
+}
+
+/* Input box styling */
+input[type="text"] {
+  width: 100%;
+  max-width: 400px; /* Limit the maximum width */
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 10px; /* Add some space below the input */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+input[type="text"]::placeholder {
+  color: #6c757d; /* Placeholder color */
+}
+
+/* Button styling */
+button {
+  background-color: #007bff; /* Bootstrap .btn-primary color */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue for hover effect */
+}
+
+/* Table styling */
+.weather-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.weather-table th, .weather-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.weather-table th {
+  background-color: #007bff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.weather-table tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather-table tr:hover {
+  background-color: #ddd;
 }
